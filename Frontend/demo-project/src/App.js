@@ -3,6 +3,7 @@ import './App.css';
 import Login from './components/Login';
 import RegistrationForm from './components/RegistrationForm';
 import AddBookForm from './components/AddBookForm';
+import Dashboard from './components/Dashboard';
 
 function App() {
   // Check if user is authenticated
@@ -50,7 +51,9 @@ function App() {
           path="/user-dashboard"
           element={
             <ProtectedRoute>
-              <div>User Dashboard</div>
+              <div>
+              <Dashboard />
+              </div>
             </ProtectedRoute>
           }
         />
