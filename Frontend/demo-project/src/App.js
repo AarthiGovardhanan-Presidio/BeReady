@@ -7,6 +7,7 @@ import NotesDashboard from './components/NotesDashboard';
 import Login from './components/Login';
 import RegistrationForm from './components/RegistrationForm';
 import AddBookForm from './components/AddBookForm';
+import Dashboard from './components/Dashboard';
 
 function App() {
   // Check if user is authenticated
@@ -61,6 +62,7 @@ function App() {
           element={
             <ProtectedRoute>
               <div>
+              <Dashboard />
                 <BookListing />
               </div>
             </ProtectedRoute>
