@@ -1,0 +1,23 @@
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}
+
+.toggle-label {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}

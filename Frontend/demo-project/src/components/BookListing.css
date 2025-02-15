@@ -10,6 +10,7 @@
 .search-input {
   width: 80%;
   max-width: 400px;
+  margin-top: 60px;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;

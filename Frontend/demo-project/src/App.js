@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import './App.css';
+import { ThemeProvider } from './contexts/ThemeContext';
 import BookListing from './components/BookListing';
+import DarkLightToggle from './components/DarkLightToggle';
 import BookCard from './components/BookCard';
 import NotesDashboard from './components/NotesDashboard';
 import Login from './components/Login';
@@ -29,7 +31,9 @@ function App() {
   const closeNotesDashboard = () => setNotesDashboardOpen(false);
 
   return (
-    <div className="App">
+    <ThemeProvider>
+      <div className="App">
+      <DarkLightToggle />
       <NotesDashboard isOpen={isNotesDashboardOpen} onClose={closeNotesDashboard} />
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -72,6 +76,7 @@ function App() {
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </div>
+    </ThemeProvider>
   );
 }
 
